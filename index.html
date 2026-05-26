@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Arcade Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="arcade">
+    <section class="game-panel" aria-label="Retro arcade game">
+      <header class="hud">
+        <div class="hud-item">
+          <span class="hud-label">Score</span>
+          <span id="score" class="hud-value">000000</span>
+        </div>
+
+        <div class="hud-item">
+          <span class="hud-label">High</span>
+          <span id="highScore" class="hud-value">000000</span>
+        </div>
+
+        <div class="hud-item">
+          <span class="hud-label">Lives</span>
+          <span id="lives" class="hud-value">3</span>
+        </div>
+
+        <div class="hud-item">
+          <span class="hud-label">Level</span>
+          <span id="level" class="hud-value">1</span>
+        </div>
+
+        <div class="hud-controls" aria-label="Game controls">
+          <button id="pauseButton" class="hud-button" type="button">Pause</button>
+          <button id="restartButton" class="hud-button" type="button">Restart</button>
+          <button id="muteButton" class="hud-button" type="button">Sound On</button>
+        </div>
+      </header>
+
+      <div class="screen-frame">
+        <canvas id="gameCanvas" width="800" height="500">
+          Your browser does not support the canvas element.
+        </canvas>
+      </div>
+
+      <div class="touch-controls" aria-label="Touch controls">
+        <button id="touchLeft" class="touch-button" type="button">Left</button>
+        <button id="touchShoot" class="touch-button touch-fire" type="button">Fire</button>
+        <button id="touchRight" class="touch-button" type="button">Right</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
